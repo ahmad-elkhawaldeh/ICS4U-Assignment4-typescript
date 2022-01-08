@@ -1,12 +1,11 @@
 /*
-* This is the main file 
+* This program is a main file.
 *
 * @author  Ahmad El-khawaldeh
 * @version 1.0
-* @since   2022-1-5
+* @since   2021-12-25
 */
 
-import * as readline from 'readline'
 import { Triangle } from "./TriangleClassFile";
 
 // main function
@@ -20,10 +19,32 @@ function main() {
         // sideB and sideC
         console.log("Side A:");
         let sideA = input('');
+
+        //checking if value entered in sideA is not a number
+        if(isNaN(sideA))
+        {
+            //throwing type error
+            throw new TypeError();
+        }
+
         console.log("\nSide B:");
         let sideB = input('');
+
+        //checking if value entered in sideB is not a number
+        if(isNaN(sideB))
+        {
+            //throwing type error
+            throw new TypeError();
+        }
         console.log("\nSide C:");
         let sideC = input('');
+
+        //checking if value entered in sideC is not a number
+        if(isNaN(sideC))
+        {
+            //throwing type error
+            throw new TypeError();
+        }
 
         // created object of class Triangle and calling different member
         // functions
@@ -40,8 +61,9 @@ function main() {
         console.log("The name is: ", t1.GetName());
         // calling GetPerimeter()
         console.log("The perimeter is: ", t1.GetPerimeter());
-    } catch (exeption) {
-        console.log('please insert an integer.') 
+    }
+    catch (exeption) {
+        console.log('ERROR:invalid input.')
     }
 }
 main();
