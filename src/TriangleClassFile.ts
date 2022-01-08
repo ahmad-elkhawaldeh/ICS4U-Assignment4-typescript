@@ -1,6 +1,10 @@
-
-
-
+/*
+* This program is the trrangle class.
+*
+* @author  Ahmad El-khawaldeh
+* @version 1.0
+* @since   2021-12-25
+*/
 
 export class Triangle {
 
